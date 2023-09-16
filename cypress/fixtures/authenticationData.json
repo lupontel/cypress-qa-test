@@ -1,0 +1,9 @@
+{
+    "email": "testqa@tpro.io",
+    "password": "123123",
+    "newPassword": "321321",
+    "invalidEmail": "testxqy@tpro.io",
+    "invalidPassword" : "546546546",
+    "invalidEmailMessage":" Please enter a valid email address ",
+    "invalidCredentialsMessage": "Invalid credentials"
+}

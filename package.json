@@ -1,0 +1,13 @@
+{
+  "name": "lupontel_technical_test_qa_engineer",
+  "version": "1.0.0",
+  "description": "Technical Test for Test Engineer",
+  "scripts": {
+    "tests": "echo\"Error: no test specified\" && exit1",
+    "open-tests": "npx cypress open --browser chrome",
+    "headless-tests": "npx cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^4.12.1"
+  }
+}
