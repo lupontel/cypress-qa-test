@@ -2,7 +2,8 @@
 This repo contains e2e tests written in Cypress in order to cover the given scenarios. 
 
 Help + Testing
-The steps below will take you all the way through Cypress. It is assumed you have nothing installed except for node + git.
+The steps below will take you all the way through Cypress. 
+It is assumed you have nothing installed except for node + git.
 
 If you get stuck, here is more help:
 
@@ -17,15 +18,18 @@ git clone [https://github.com/<your-username>/cypress-qa-test](https://github.co
 
 For rest of the installations move to project folder in command prompt and type
 
-'npm install'
+`npm install`
 
 which will install Cypress and other supporting tools
 
 ## Run Test
 To open cypress and choose wich e2e test do you want to run use the following command
 
-'npm run open-tests' 
+`npm run open-tests`
 
 To run all e2e tests using the headless mode run the following command.
 
-'npm run headless-tests'
+`npm run headless-tests`
+
+## Test Result
+You can find the e2e results under videos\e2e folder.
