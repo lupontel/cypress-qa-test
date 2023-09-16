@@ -27,5 +27,26 @@ export default class PasswordPage {
         cy.contains("User updated");
    }
 
+   getPasswordNotMatchMessage(){
+      cy.get('.mat-mdc-simple-snack-bar')
+      cy.contains("Passwords do not match");
+   }
+
+   getPasswordInvalidCredentialsMessage(){
+      cy.get('.mat-mdc-simple-snack-bar')
+      cy.contains("Invalid credentials");
+ }
+
+   getClearNewPassword(){
+      cy.get('#mat-input-17').clear();
+}
+
+   getClearCurrentPassword(){
+      cy.get('#mat-input-19').clear();
+}
+
+   getClearVerifyPassword(){
+      cy.get('#mat-input-18').clear();
+}
 }
 

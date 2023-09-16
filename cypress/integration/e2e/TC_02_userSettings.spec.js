@@ -36,4 +36,9 @@ it('As an user I would like to reset my password to the previous one', function(
     cy.updatePassword(this.data.newPassword,this.data.password,this.data.password);     
 })
 
+it('As an user I would like to see an error message when passwords do not mach', function(){
+    cy.login(this.data.email,this.data.password);
+    cy.updatePasswordNotMatch(this.data.password,this.data.newPassword,this.data.diffPassword);     
+})
+
 })

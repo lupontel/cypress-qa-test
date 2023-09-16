@@ -17,7 +17,7 @@ Cypress.Commands.add("logout", () => {
 Perfoming the steps to change the password and after checking 
 if the user is not able to log in with the "old Password". 
 */
-Cypress.Commands.add("updatePassword",(userPassword, newPassword, userEmail, invalidCredentialsMessage) => {
+Cypress.Commands.add("updatePassword",(userPassword, newPassword) => {
     const userSetting = new UserSettings();
     const passPage = new PasswordPage();
     const authPage = new AuthenticationPage();
@@ -39,4 +39,34 @@ Cypress.Commands.add("updatePassword",(userPassword, newPassword, userEmail, inv
     })
 });
 
+Cypress.Commands.add("updatePasswordNotMatch",(userPassword, newPassword, diffPassword) => {
+    const userSetting = new UserSettings();
+    const passPage = new PasswordPage();
+    const authPage = new AuthenticationPage();
+
+    cy.fixture('authenticationData').then((data)=>{
+        cy.wait(4000)          
+        userSetting.getUserProfile();
+        cy.wait(3000);
+        userSetting.getEditAccount();
+        cy.wait(3000);
+        userSetting.getPasswordMenu();
+        cy.wait(3000);
+        passPage.getCurrentPassword(userPassword);
+        passPage.getNewPassword(diffPassword);
+        passPage.getVerifyPassword(newPassword);
+        passPage.getUpdatebtn();
+        passPage.getPasswordNotMatchMessage();
+        cy.wait(3000);
+        
+        passPage.getClearCurrentPassword();
+        passPage.getCurrentPassword(diffPassword);
+        passPage.getClearNewPassword();
+        passPage.getNewPassword(newPassword);      
+        passPage.getClearVerifyPassword();
+        passPage.getVerifyPassword(newPassword);
+        passPage.getUpdatebtn();
+        passPage.getPasswordInvalidCredentialsMessage(); 
+    })
+});
 
