@@ -1,4 +1,4 @@
-# cypress-qa-2e2-test
+# cypress-qa-e2e-test
 This repo contains e2e tests written in Cypress in order to cover the given scenarios. 
 
 Help + Testing
